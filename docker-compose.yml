@@ -1,0 +1,8 @@
+version: '3.6'
+
+services:
+  youless:
+    image: chappio/youless-prometheus
+    ports:
+      - 80:80
+    command: http://192.168.1.12
