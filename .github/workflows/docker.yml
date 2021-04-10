@@ -20,3 +20,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: chappio/youless-prometheus:latest
+      - uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: chappio/youless-prometheus
